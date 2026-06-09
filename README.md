@@ -40,14 +40,14 @@ macbook-setup/
 ### Non-interactive
 
 ```bash
-./bootstrap.sh --role personal --git-name "Peyton" --git-email "peyton@example.com"
+./bootstrap.sh --role personal --git-name "Peyton" --git-email "peyton.scott078@gmail.com"
 ```
 
 With a dotfiles repo:
 
 ```bash
-./bootstrap.sh --role personal --git-name "Peyton" --git-email "peyton@example.com" \
-  --dotfiles-repo "https://github.com/yourusername/dotfiles.git"
+./bootstrap.sh --role personal --git-name "Peyton" --git-email "peyton.scott078@gmail.com" \
+  --dotfiles-repo "https://github.com/peytonmscott/dotfiles.git"
 ```
 
 ### Flags
