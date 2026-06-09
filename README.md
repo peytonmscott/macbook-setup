@@ -40,14 +40,14 @@ macbook-setup/
 ### Non-interactive
 
 ```bash
-./bootstrap.sh --role personal --git-name "Peyton" --git-email "peyton.scott078@gmail.com"
+./bootstrap.sh --role personal --git-name "Your Name" --git-email "your.email@example.com"
 ```
 
 With a dotfiles repo:
 
 ```bash
-./bootstrap.sh --role personal --git-name "Peyton" --git-email "peyton.scott078@gmail.com" \
-  --dotfiles-repo "https://github.com/peytonmscott/dotfiles.git"
+./bootstrap.sh --role personal --git-name "Your Name" --git-email "your.email@example.com" \
+  --dotfiles-repo "https://github.com/yourusername/dotfiles.git"
 ```
 
 ### Flags
@@ -64,6 +64,45 @@ With a dotfiles repo:
 | `--skip-packages` | Skip package installation |
 | `--dry-run` | Show what would be done |
 | `--help` | Show usage |
+
+## Role-Based Configuration
+
+The `--role` flag controls which apps and settings get installed. This is useful if you have separate work and personal machines with different needs.
+
+### How It Works
+
+- **Common packages** (`brew/Brewfile.common`) are installed on all machines
+- **Role-specific packages** are installed based on `--role personal` or `--role work`
+- **Dock items** are configured differently for each role
+- **macOS settings** apply regardless of role
+
+### Work vs Personal
+
+| | Personal | Work |
+|---|---|---|
+| **Extra packages** | `brew/Brewfile.personal` | `brew/Brewfile.work` |
+| **Example apps** | Discord, personal tools | Azure CLI, work tools |
+| **Dock items** | Messages, Notes, App Store | (none extra) |
+
+### Customizing Roles
+
+1. **Add packages**: Edit `brew/Brewfile.personal` or `brew/Brewfile.work`
+2. **Add dock items**: Edit `scripts/dock.sh` (search for `MACHINE_ROLE`)
+3. **Add env vars**: Edit `config/personal.env` or `config/work.env`
+
+Example Brewfile customization:
+
+```ruby
+# brew/Brewfile.personal
+cask "discord"
+brew "spotify-tui"
+```
+
+```ruby
+# brew/Brewfile.work
+brew "azure-cli"
+cask "docker"
+```
 
 ## What It Does
 
