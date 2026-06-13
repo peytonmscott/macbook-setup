@@ -191,6 +191,9 @@ fi
 # 8. Kotlin
 bash "$REPO_ROOT/scripts/kotlin.sh"
 
+# 8.5 Kotlin Language Server
+bash "$REPO_ROOT/scripts/kotlin-lsp.sh"
+
 # 9. Android
 bash "$REPO_ROOT/scripts/android.sh"
 

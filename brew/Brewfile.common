@@ -13,7 +13,8 @@ brew "starship"
 brew "gh"
 brew "jj"
 brew "opencode"
-brew "jetbrains/utils/kotlin-lsp"
+# Note: kotlin-lsp is installed manually in scripts/kotlin-lsp.sh
+# because the Homebrew tap often lags behind JetBrains releases
 brew "lua-language-server"
 brew "basedpyright"
 brew "typescript-language-server"
