@@ -22,5 +22,6 @@ brew "vscode-langservers-extracted"
 brew "mobile-dev-inc/tap/maestro"
 brew "junie"
 
+cask "linearmouse"
 cask "ghostty"
 cask "jetbrains-toolbox"
