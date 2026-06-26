@@ -117,7 +117,8 @@ cask "docker"
 9. Symlinks dotfiles from your repo (with backups for conflicts)
 10. Applies macOS settings (Dock, Finder, Keyboard, Menu Bar)
 11. Installs Kotlin and Android CLI tools
-12. Runs postflight checks and prints summary
+12. Installs OmniWM tiling window manager
+13. Runs postflight checks and prints summary
 
 ## Dotfiles
 
@@ -135,6 +136,7 @@ dotfiles/
 ├── git/gitignore_global   -> ~/.gitignore_global
 ├── ghostty/               -> ~/.config/ghostty
 ├── aerospace/aerospace.toml -> ~/.config/aerospace/aerospace.toml
+├── omniwm/                -> ~/.config/omniwm
 ├── nvim/                  -> ~/.config/nvim
 ├── starship/starship.toml -> ~/.config/starship.toml
 └── yazi/                  -> ~/.config/yazi
